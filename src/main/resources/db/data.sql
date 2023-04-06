@@ -1,0 +1,10 @@
+INSERT INTO toppings (name) VALUES ('Pepperoni');
+INSERT INTO toppings (name) VALUES ('Mushroom');
+INSERT INTO toppings (name) VALUES ('Extra cheese');
+INSERT INTO toppings (name) VALUES ('Sausage');
+INSERT INTO toppings (name) VALUES ('Onion');
+INSERT INTO toppings (name) VALUES ('Black olives');
+INSERT INTO toppings (name) VALUES ('Green pepper');
+INSERT INTO toppings (name) VALUES ('Fresh garlic');
+INSERT INTO toppings (name) VALUES ('Tomato');
+INSERT INTO toppings (name) VALUES ('Fresh basil');
