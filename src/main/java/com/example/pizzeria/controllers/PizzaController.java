@@ -18,8 +18,8 @@ import java.util.List;
 @RequestMapping("/pizza")
 public class PizzaController {
 
-    private ToppingService toppingService;
-    private UserService userService;
+    private final ToppingService toppingService;
+    private final UserService userService;
 
     @Autowired
     public PizzaController(ToppingService toppingService, UserService userService) {

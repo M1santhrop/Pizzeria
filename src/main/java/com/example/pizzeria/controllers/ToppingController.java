@@ -13,7 +13,7 @@ import java.util.Map;
 @RequestMapping("/topping")
 public class ToppingController {
 
-    private UserService userService;
+    private final UserService userService;
 
     @Autowired
     public ToppingController(UserService userService) {

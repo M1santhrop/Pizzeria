@@ -10,7 +10,7 @@ import java.util.List;
 @Service
 public class ToppingService {
 
-    private ToppingRepository toppingRepository;
+    private final ToppingRepository toppingRepository;
 
     @Autowired
     public ToppingService(ToppingRepository toppingRepository) {
