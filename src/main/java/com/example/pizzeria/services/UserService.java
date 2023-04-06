@@ -2,7 +2,6 @@ package com.example.pizzeria.services;
 
 import com.example.pizzeria.entities.Topping;
 import com.example.pizzeria.entities.User;
-import com.example.pizzeria.repositories.ToppingRepository;
 import com.example.pizzeria.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,7 +10,6 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.function.Function;
 import java.util.stream.Collectors;
 
 @Service

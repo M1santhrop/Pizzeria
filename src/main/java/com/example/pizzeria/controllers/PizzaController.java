@@ -2,14 +2,12 @@ package com.example.pizzeria.controllers;
 
 import com.example.pizzeria.entities.Topping;
 import com.example.pizzeria.entities.User;
-import com.example.pizzeria.repositories.ToppingRepository;
 import com.example.pizzeria.services.ToppingService;
 import com.example.pizzeria.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
