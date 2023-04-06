@@ -1,4 +1,4 @@
-package com.example.pizzeria.entities;
+package com.example.pizzeria.entity;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -8,7 +8,7 @@ import javax.persistence.*;
 @Entity
 @Data
 @NoArgsConstructor
-@Table(name = "toppings")
+@Table
 public class Topping {
 
     @Id

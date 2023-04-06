@@ -1,4 +1,4 @@
-package com.example.pizzeria.entities;
+package com.example.pizzeria.entity;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -12,7 +12,7 @@ import java.util.Set;
 @Entity
 @Data
 @NoArgsConstructor
-@Table(name = "users")
+@Table(name = "topping_user")
 @EqualsAndHashCode(of = "email")
 public class User {
 
@@ -26,7 +26,7 @@ public class User {
     private String email;
 
     @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinTable(name = "user_toppings",
+    @JoinTable(name = "user_topping_xref",
             joinColumns = {@JoinColumn(name = "user_id")},
             inverseJoinColumns = {@JoinColumn(name = "topping_id")})
     private Set<Topping> toppings = new HashSet<>();

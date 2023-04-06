@@ -1,8 +1,8 @@
-package com.example.pizzeria.controllers;
+package com.example.pizzeria.controller;
 
-import com.example.pizzeria.entities.Topping;
-import com.example.pizzeria.entities.User;
-import com.example.pizzeria.services.UserService;
+import com.example.pizzeria.dto.ToppingDTO;
+import com.example.pizzeria.dto.UserDTO;
+import com.example.pizzeria.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import java.util.Set;
+import java.util.List;
 
 @Controller
-@RequestMapping("/user")
+@RequestMapping("/users")
 public class UserController {
 
     private final UserService userService;
@@ -25,14 +25,15 @@ public class UserController {
 
     @GetMapping
     public String showUserChoice(Model model) {
-        model.addAttribute("user", new User());
+        model.addAttribute("user", new UserDTO());
         return "userChoice";
     }
 
     @PostMapping
-    public String processEmail(Model model, User user) {
-        Set<Topping> toppings = userService.getToppings(user);
-        model.addAttribute("toppings", toppings);
+    public String processEmail(Model model, UserDTO userDTO) {
+        List<ToppingDTO> toppingDTOs = userService.getToppings(userDTO);
+        model.addAttribute("user", userDTO);
+        model.addAttribute("toppings", toppingDTOs);
         return "userChoice";
     }
 }

@@ -17,7 +17,7 @@
     </div>
     </div>
 </form>
-<div th:if="${!toppings.isEmpty()}">
+<div th:if="${toppings != null && !toppings.isEmpty()}">
     <table style="border: solid 1px black;">
         <thead>
         <tr>
