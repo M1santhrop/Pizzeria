@@ -8,7 +8,6 @@ import lombok.NoArgsConstructor;
 
 import java.util.Set;
 
-
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class UserConverter {
 
